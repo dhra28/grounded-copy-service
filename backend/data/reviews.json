@@ -1,0 +1,219 @@
+[
+  {
+    "review_id": "R911",
+    "product_id": "P105",
+    "rating": 5,
+    "verified_purchase": true,
+    "text": "These cured my constant colds, haven't been sick once since starting them."
+  },
+  {
+    "review_id": "R915",
+    "product_id": "P107",
+    "rating": 5,
+    "verified_purchase": true,
+    "text": "Best ever shoes I've owned, full stop. Grip on wet pavement is unreal."
+  },
+  {
+    "review_id": "R930",
+    "product_id": "P117",
+    "rating": 3,
+    "verified_purchase": true,
+    "text": "Good but pricier per cup than making my own."
+  },
+  {
+    "review_id": "R910",
+    "product_id": "P104",
+    "rating": 5,
+    "verified_purchase": true,
+    "text": "Fits big on me, I'd size down. Great basic tee though."
+  },
+  {
+    "review_id": "R906",
+    "product_id": "P102",
+    "rating": 2,
+    "verified_purchase": true,
+    "text": "No difference for me after a month."
+  },
+  {
+    "review_id": "R931",
+    "product_id": "P118",
+    "rating": 5,
+    "verified_purchase": true,
+    "text": "From stovetop to oven, bread came out incredible. Heavy, as expected."
+  },
+  {
+    "review_id": "R921",
+    "product_id": "P111",
+    "rating": 5,
+    "verified_purchase": true,
+    "text": "Heats evenly, sauces don't catch. Handle stays cool."
+  },
+  {
+    "review_id": "R914",
+    "product_id": "P115",
+    "rating": 3,
+    "verified_purchase": true,
+    "text": "Pleasant taste, mildly relaxing. Not a knockout."
+  },
+  {
+    "review_id": "R907",
+    "product_id": "P103",
+    "rating": 5,
+    "verified_purchase": true,
+    "text": "Pitched in under five minutes solo. Storm-tested in the Lakes, bone dry."
+  },
+  {
+    "review_id": "R927",
+    "product_id": "P114",
+    "rating": 4,
+    "verified_purchase": true,
+    "text": "Clean look, fits under the seat. Wish the bottle pocket were deeper."
+  },
+  {
+    "review_id": "R920",
+    "product_id": "P110",
+    "rating": 4,
+    "verified_purchase": true,
+    "text": "Warm light, sturdy base. Assembly took ten minutes."
+  },
+  {
+    "review_id": "R912",
+    "product_id": "P105",
+    "rating": 4,
+    "verified_purchase": true,
+    "text": "Taste great. Easy part of my morning routine."
+  },
+  {
+    "review_id": "R909",
+    "product_id": "P104",
+    "rating": 4,
+    "verified_purchase": true,
+    "text": "Lovely soft fabric, but it runs small. Size up."
+  },
+  {
+    "review_id": "R928",
+    "product_id": "P116",
+    "rating": 5,
+    "verified_purchase": true,
+    "text": "No tightness after washing, and my sensitive skin hasn't complained once."
+  },
+  {
+    "review_id": "R903",
+    "product_id": "P106",
+    "rating": 5,
+    "verified_purchase": true,
+    "text": "Ice still there after a full day hiking. Doesn't leak in my bag."
+  },
+  {
+    "review_id": "R917",
+    "product_id": "P109",
+    "rating": 5,
+    "verified_purchase": true,
+    "text": "Charges my phone while I work, light is easy on the eyes at night."
+  },
+  {
+    "review_id": "R924",
+    "product_id": "P113",
+    "rating": 4,
+    "verified_purchase": true,
+    "text": "Battery genuinely lasts the week. Step count matches my phone."
+  },
+  {
+    "review_id": "R919",
+    "product_id": "P110",
+    "rating": 5,
+    "verified_purchase": true,
+    "text": "The wireless charging pad on this desk lamp is so convenient!"
+  },
+  {
+    "review_id": "R923",
+    "product_id": "P112",
+    "rating": 5,
+    "verified_purchase": true,
+    "text": "Gets softer with every wash. Sleeps cool in summer."
+  },
+  {
+    "review_id": "R908",
+    "product_id": "P103",
+    "rating": 1,
+    "verified_purchase": true,
+    "text": "Leaked at the seams in moderate rain. Disappointed for the price."
+  },
+  {
+    "review_id": "R918",
+    "product_id": "P109",
+    "rating": 4,
+    "verified_purchase": true,
+    "text": "Solid lamp. The touch controls take a day to get used to."
+  },
+  {
+    "review_id": "R929",
+    "product_id": "P117",
+    "rating": 5,
+    "verified_purchase": true,
+    "text": "Smooth, chocolatey, zero bitterness. One bottle lasts my week."
+  },
+  {
+    "review_id": "R926",
+    "product_id": "P114",
+    "rating": 5,
+    "verified_purchase": true,
+    "text": "Survived a monsoon commute, laptop dry. Straps are comfy."
+  },
+  {
+    "review_id": "R902",
+    "product_id": "P101",
+    "rating": 4,
+    "verified_purchase": true,
+    "text": "Firmer than expected but very comfortable. Cover washes well."
+  },
+  {
+    "review_id": "R922",
+    "product_id": "P111",
+    "rating": 2,
+    "verified_purchase": true,
+    "text": "Discoloured after the dishwasher. Hand wash only, learned the hard way."
+  },
+  {
+    "review_id": "R905",
+    "product_id": "P102",
+    "rating": 4,
+    "verified_purchase": true,
+    "text": "Teeth look a shade brighter after three weeks. Nice mild mint."
+  },
+  {
+    "review_id": "R913",
+    "product_id": "P115",
+    "rating": 5,
+    "verified_purchase": true,
+    "text": "Fixed my insomnia in a week. I fall asleep within minutes now."
+  },
+  {
+    "review_id": "R925",
+    "product_id": "P113",
+    "rating": 2,
+    "verified_purchase": true,
+    "text": "No GPS was a surprise, read the specs unlike me."
+  },
+  {
+    "review_id": "R904",
+    "product_id": "P106",
+    "rating": 4,
+    "verified_purchase": true,
+    "text": "Good bottle. A bit heavy when full."
+  },
+  {
+    "review_id": "R916",
+    "product_id": "P107",
+    "rating": 4,
+    "verified_purchase": true,
+    "text": "Light and springy. Toe box slightly narrow."
+  },
+  {
+    "review_id": "R901",
+    "product_id": "P101",
+    "rating": 5,
+    "verified_purchase": true,
+    "text": "Held its shape after two months. My neck pain in the mornings is gone."
+  }
+]

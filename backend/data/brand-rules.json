@@ -1,0 +1,8 @@
+{
+  "tone": "Confident, warm, and plain-spoken. No hype.",
+  "max_headline_chars": 60,
+  "max_subline_chars": 120,
+  "banned_words": ["guaranteed", "miracle", "best ever", "cure", "#1"],
+  "claims_policy": "Every factual claim must be supported by the product's attributes or its reviews. Never invent facts. No health or medical claims, even if a review makes one. No unverifiable superlatives.",
+  "required": "Every headline must be specific to the product, not generic filler."
+}

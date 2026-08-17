@@ -1,0 +1,226 @@
+[
+  {
+    "product_id": "P101",
+    "name": "CloudSoft Memory Foam Pillow",
+    "category": "Home",
+    "price": 49.0,
+    "attributes": {
+      "material": "memory foam",
+      "firmness": "medium",
+      "warranty_years": 3,
+      "certifications": [
+        "OEKO-TEX"
+      ]
+    },
+    "current_headline": "A pillow you will love."
+  },
+  {
+    "product_id": "P106",
+    "name": "Baseline Stainless Water Bottle 750ml",
+    "category": "Sports",
+    "price": 22.0,
+    "attributes": {
+      "capacity_ml": 750,
+      "insulated": true,
+      "keeps_cold_hours": 24
+    },
+    "current_headline": null
+  },
+  {
+    "product_id": "P102",
+    "name": "Guaranteed Results Whitening Toothpaste",
+    "category": "Beauty",
+    "price": 12.5,
+    "attributes": {
+      "size_ml": 100,
+      "flavour": "mint",
+      "fluoride": true
+    },
+    "current_headline": "Brighter smile, every day."
+  },
+  {
+    "product_id": "P103",
+    "name": "TrailMaster Pro Ultralight 2-Person Backpacking Tent with All-Season Weatherproof Ripstop Shell",
+    "category": "Sports",
+    "price": 289.0,
+    "attributes": {
+      "weight_kg": 1.4,
+      "capacity": 2,
+      "waterproof_rating_mm": 3000
+    },
+    "current_headline": "Adventure awaits."
+  },
+  {
+    "product_id": "P104",
+    "name": "Everyday Cotton Tee",
+    "category": "Apparel",
+    "price": 19.0,
+    "attributes": {},
+    "current_headline": null
+  },
+  {
+    "product_id": "P105",
+    "name": "VitaBoost Immune Support Gummies",
+    "category": "Health",
+    "price": 24.0,
+    "attributes": {
+      "count": 60,
+      "flavour": "berry",
+      "vegan": true
+    },
+    "current_headline": "Support your immune system."
+  },
+  {
+    "product_id": "P115",
+    "name": "DeepRest Melatonin-Free Sleep Tea",
+    "category": "Health",
+    "price": 16.0,
+    "attributes": {
+      "bags": 30,
+      "caffeine_free": true,
+      "ingredients": [
+        "chamomile",
+        "valerian",
+        "lemon balm"
+      ]
+    },
+    "current_headline": null
+  },
+  {
+    "product_id": "P107",
+    "name": "AeroGrip Pro Running Shoes",
+    "category": "Sports",
+    "price": 129.0,
+    "attributes": {
+      "weight_g": 240,
+      "drop_mm": 8,
+      "sizes": "6-13"
+    },
+    "current_headline": null
+  },
+  {
+    "product_id": "P108",
+    "name": "Nordic Oak Serving Board",
+    "category": "Home",
+    "price": 39.0,
+    "attributes": {
+      "material": "oak",
+      "length_cm": 45,
+      "food_safe_oil_finish": true
+    },
+    "current_headline": null
+  },
+  {
+    "product_id": "P109",
+    "name": "Halo Desk Lamp with Wireless Charger",
+    "category": "Electronics",
+    "price": 59.0,
+    "attributes": {
+      "lumens": 800,
+      "colour_temps": 3,
+      "usb_c": true,
+      "qi_charging": true
+    },
+    "current_headline": null
+  },
+  {
+    "product_id": "P110",
+    "name": "Halo Floor Lamp",
+    "category": "Electronics",
+    "price": 89.0,
+    "attributes": {
+      "lumens": 1200,
+      "height_cm": 150,
+      "dimmable": true
+    },
+    "current_headline": null
+  },
+  {
+    "product_id": "P111",
+    "name": "Copper Core 24cm Saute Pan",
+    "category": "Home",
+    "price": 74.0,
+    "attributes": {
+      "diameter_cm": 24,
+      "oven_safe_c": 220,
+      "induction_compatible": true
+    },
+    "current_headline": null
+  },
+  {
+    "product_id": "P112",
+    "name": "Meridian Linen Duvet Cover, King",
+    "category": "Home",
+    "price": 119.0,
+    "attributes": {
+      "material": "100% linen",
+      "size": "king",
+      "colours": [
+        "natural",
+        "sage",
+        "charcoal"
+      ]
+    },
+    "current_headline": null
+  },
+  {
+    "product_id": "P113",
+    "name": "PulseTrack Fitness Band 3",
+    "category": "Electronics",
+    "price": 79.0,
+    "attributes": {
+      "battery_days": 10,
+      "waterproof_atm": 5,
+      "gps": false
+    },
+    "current_headline": null
+  },
+  {
+    "product_id": "P114",
+    "name": "Atlas Everyday Backpack 20L",
+    "category": "Apparel",
+    "price": 65.0,
+    "attributes": {
+      "capacity_l": 20,
+      "laptop_sleeve_in": 15,
+      "water_resistant": true
+    },
+    "current_headline": null
+  },
+  {
+    "product_id": "P116",
+    "name": "Petal & Oat Gentle Face Cleanser",
+    "category": "Beauty",
+    "price": 18.0,
+    "attributes": {
+      "size_ml": 150,
+      "fragrance_free": true,
+      "ph": 5.5
+    },
+    "current_headline": null
+  },
+  {
+    "product_id": "P117",
+    "name": "Solstice Cold Brew Concentrate",
+    "category": "Food & Bev",
+    "price": 15.0,
+    "attributes": {
+      "size_ml": 500,
+      "servings": 10,
+      "origin": "Colombia"
+    },
+    "current_headline": null
+  },
+  {
+    "product_id": "P118",
+    "name": "Ember Cast Iron Dutch Oven 5L",
+    "category": "Home",
+    "price": 99.0,
+    "attributes": {
+      "capacity_l": 5,
+      "pre_seasoned": true,
+      "oven_safe_c": 260
+    },
+    "current_headline": null
+  }
+]
