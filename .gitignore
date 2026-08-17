@@ -1,0 +1,8 @@
+**/.env
+**/venv/
+**/node_modules/
+**/__pycache__/
+**/*.pyc
+**/eval_output.json
+**/eval_report.txt
+**/dist/
