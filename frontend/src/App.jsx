@@ -40,26 +40,28 @@ function EvalSummary({ onEvalComplete }) {
       });
   };
 
-  if (loading) return <p>Loading eval results...</p>;
-
   return (
     <div className="eval-summary">
       <div className="eval-header">
-        <h2>Latest Eval Run</h2>
+        <div>
+          <h2>Latest Eval Run</h2>
+          <p className="eval-subtext">Groundedness = % of claims verified against real evidence</p>
+        </div>
         <button onClick={handleRunEval} disabled={running}>
-          {running ? "Running eval (~2-3 min)..." : "Run New Eval"}
+          {running ? "Running (~2-3 min)..." : "Run New Eval"}
         </button>
       </div>
 
+      {loading && <p className="muted">Loading eval results...</p>}
       {error && <p className="error">{error}</p>}
 
-      {summary && (
+      {summary && !loading && (
         <div className="stat-row">
           <div className="stat-card">
             <div className="stat-value">{summary.passed}/{summary.total_products}</div>
             <div className="stat-label">Passed</div>
           </div>
-          <div className="stat-card">
+          <div className="stat-card stat-highlight">
             <div className="stat-value">{(summary.groundedness_pass_rate * 100).toFixed(0)}%</div>
             <div className="stat-label">Groundedness</div>
           </div>
@@ -77,7 +79,7 @@ function EvalSummary({ onEvalComplete }) {
   );
 }
 
-function ProductDetailRow({ product }) {
+function ProductDetailRow({ product, onGenerated }) {
   const [copy, setCopy] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -109,6 +111,7 @@ function ProductDetailRow({ product }) {
       .then((data) => {
         setCopy(data);
         setGenerating(false);
+        onGenerated(); // tell App to refresh the product list/status badges
       })
       .catch((err) => {
         setError(err.message);
@@ -120,10 +123,10 @@ function ProductDetailRow({ product }) {
     <tr>
       <td colSpan={5} className="detail-cell">
         <div className="detail-panel-inline">
-          {loading && <p>Loading copy...</p>}
+          {loading && <p className="muted">Loading copy...</p>}
 
           {!loading && error && (
-            <div>
+            <div className="empty-state">
               <p className="error">{error}</p>
               <button onClick={() => handleGenerate(false)} disabled={generating}>
                 {generating ? "Generating..." : "Generate Copy"}
@@ -134,9 +137,11 @@ function ProductDetailRow({ product }) {
           {!loading && !error && copy && (
             <>
               <div className="copy-block">
-                <p className="headline">{copy.headline}</p>
+                <div className="copy-block-top">
+                  <p className="headline">{copy.headline}</p>
+                  <span className={`badge badge-${copy.status}`}>{copy.status}</span>
+                </div>
                 <p className="subline">{copy.subline}</p>
-                <span className={`badge badge-${copy.status}`}>{copy.status}</span>
               </div>
 
               <h3>Claims &amp; Citations</h3>
@@ -145,26 +150,28 @@ function ProductDetailRow({ product }) {
                   <li key={i}>
                     <span className="claim-text">"{c.text}"</span>
                     <span className={`source-tag source-${c.source_type}`}>
-                      {c.source_type}: {c.source_id}
+                      {c.source_type === "attribute" ? "📋" : "💬"} {c.source_id}
                     </span>
                   </li>
                 ))}
               </ul>
 
               {copy.attempt_log && (
-                <>
-                  <h3>Generation Log</h3>
+                <details className="log-details">
+                  <summary>Generation Log ({copy.attempt_log.length} steps)</summary>
                   <ul className="log-list">
                     {copy.attempt_log.map((entry, i) => (
                       <li key={i}>{entry}</li>
                     ))}
                   </ul>
-                </>
+                </details>
               )}
 
-              <button onClick={() => handleGenerate(true)} disabled={generating}>
-                {generating ? "Regenerating..." : "Force Regenerate"}
-              </button>
+              <div className="detail-actions">
+                <button onClick={() => handleGenerate(true)} disabled={generating}>
+                  {generating ? "Regenerating..." : "Force Regenerate"}
+                </button>
+              </div>
             </>
           )}
         </div>
@@ -195,7 +202,7 @@ function App() {
     loadProducts();
   }, []);
 
-  if (loading) return <div className="container"><p>Loading products...</p></div>;
+  if (loading) return <div className="container"><p className="muted">Loading products...</p></div>;
   if (error) return <div className="container"><p className="error">Error: {error}</p></div>;
 
   const toggleRow = (product) => {
@@ -204,8 +211,10 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Grounded Product Copy — Dashboard</h1>
-      <p className="subtitle">{products.length} products loaded — click a row to expand</p>
+      <header className="page-header">
+        <h1>Grounded Product Copy</h1>
+        <p className="subtitle">AI-generated product copy, verified against real evidence — {products.length} products</p>
+      </header>
 
       <EvalSummary onEvalComplete={loadProducts} />
 
@@ -227,8 +236,8 @@ function App() {
                 onClick={() => toggleRow(p)}
                 className={`clickable-row ${expandedId === p.product_id ? "row-expanded" : ""}`}
               >
-                <td>{p.product_id}</td>
-                <td>{p.name}</td>
+                <td className="mono">{p.product_id}</td>
+                <td className="product-name">{p.name}</td>
                 <td>{p.category}</td>
                 <td>${p.price}</td>
                 <td>
@@ -238,7 +247,11 @@ function App() {
                 </td>
               </tr>
               {expandedId === p.product_id && (
-                <ProductDetailRow key={`${p.product_id}-detail`} product={p} />
+                <ProductDetailRow
+                  key={`${p.product_id}-detail`}
+                  product={p}
+                  onGenerated={loadProducts}
+                />
               )}
             </>
           ))}
