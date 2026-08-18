@@ -9,6 +9,8 @@ AI-generated product copy (headline + subline) that's verified against real prod
 - **Repo**: `https://github.com/dhra28/grounded-copy-service.git`
 - **Demo API key** (use in `/docs` → Authorize, or as the `X-API-Key` header): `test-key-123`
 
+> Note: hosted on free-tier infrastructure with a scheduled keep-alive ping every 2 minutes to minimize cold-start latency.
+
 ## Tech Stack
 
 - **Backend**: FastAPI, Python
