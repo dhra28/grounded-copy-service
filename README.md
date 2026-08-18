@@ -5,8 +5,9 @@ AI-generated product copy (headline + subline) that's verified against real prod
 ## Live Demo
 
 - **App**: `https://grounded-copy-service.vercel.app/`
-- **API docs**: `https://grounded-copy-service.onrender.com`
+- **API docs**: `https://grounded-copy-service.onrender.com/docs`
 - **Repo**: `https://github.com/dhra28/grounded-copy-service.git`
+- **Demo API key** (use in `/docs` → Authorize, or as the `X-API-Key` header): `test-key-123`
 
 ## Tech Stack
 
@@ -76,6 +77,14 @@ The system is designed to handle imperfect data explicitly:
 ## Evaluation
 
 `POST /eval/run` generates and verifies copy across all products, reporting a programmatic pass rate, a groundedness pass rate (claim-level, LLM-judged), and repair/fallback counts. Results are viewable via `GET /eval/results` and in the dashboard.
+
+## Engineering Notes
+
+**Parameters**: `temperature=0.4` for generation (allows natural phrasing variation while staying controlled), `temperature=0.0` for the groundedness judge (consistency matters more than creativity when fact-checking). `max_tokens=3000` — sized for the model's internal reasoning overhead as well as the JSON output itself.
+
+**Caching**: generated copy is stored keyed on `product_id`, so repeat requests return instantly without a new LLM call unless `force=true` is passed.
+
+**Failure handling**: LLM timeouts and rate limits are retried once with a delay before falling back to a deterministic, attribute-only template — the service never returns an unverified claim, and a global exception handler prevents any unhandled error (e.g. a database hiccup) from crashing the API or leaking internal details in the response.
 
 ## Cost & Latency
 
